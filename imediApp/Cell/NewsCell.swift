@@ -14,6 +14,7 @@ class NewsCell: UITableViewCell {
     private let timeLabel = UILabel()
     private let titleLabel = UILabel()
     private let separatorView = UIView()
+    var news: News?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -36,6 +37,7 @@ class NewsCell: UITableViewCell {
         setupNewsImage()
         setupTitleLabel()
         setupTimeLabel()
+        
     }
     
     private func setupNewsImage() {
@@ -47,7 +49,6 @@ class NewsCell: UITableViewCell {
         newsImage.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 25).isActive = true
         newsImage.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -24).isActive = true
         newsImage.heightAnchor.constraint(equalToConstant: 108).isActive = true
-        newsImage.image = UIImage(named: "Placeholder")
         newsImage.contentMode = .scaleAspectFill
         newsImage.clipsToBounds = true
         newsImage.layer.cornerRadius = 14
@@ -61,7 +62,6 @@ class NewsCell: UITableViewCell {
         timeLabel.bottomAnchor.constraint(equalTo: titleLabel.topAnchor).isActive = true
         timeLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
     }
-    
     
     private func setupTitleLabel() {
         addSubview(titleLabel)
@@ -87,7 +87,12 @@ class NewsCell: UITableViewCell {
     }
     
     func configure(with news: News) {
-        newsImage.image = UIImage(named: "Placeholder")
+        guard let photoURLString = news.photoURL,
+              let photoURL = URL(string: photoURLString) else {
+            newsImage.image = UIImage(named: "Placeholder")
+            return
+        }
+        newsImage.load(url: photoURL)
         timeLabel.text = news.time
         titleLabel.text = news.title
     }

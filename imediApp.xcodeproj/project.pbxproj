@@ -15,6 +15,7 @@
 		FBECDED82BD26567005B11B7 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDED72BD26567005B11B7 /* ArticleViewController.swift */; };
 		FBECDEDA2BD2821D005B11B7 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDED92BD2821D005B11B7 /* NewsCell.swift */; };
 		FBECDEDE2BD28E63005B11B7 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBECDEDD2BD28E63005B11B7 /* NewsModel.swift */; };
+		FBF33FDC2BD6AA11002F29DF /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF33FDB2BD6AA11002F29DF /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FBECDED72BD26567005B11B7 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		FBECDED92BD2821D005B11B7 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		FBECDEDD2BD28E63005B11B7 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		FBF33FDB2BD6AA11002F29DF /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +62,58 @@
 		FBECDEC22BD25B6F005B11B7 /* imediApp */ = {
 			isa = PBXGroup;
 			children = (
-				FBECDEC32BD25B6F005B11B7 /* AppDelegate.swift */,
-				FBECDEC52BD25B6F005B11B7 /* SceneDelegate.swift */,
-				FBECDEC72BD25B6F005B11B7 /* NewsPageViewController.swift */,
-				FBECDED72BD26567005B11B7 /* ArticleViewController.swift */,
-				FBECDED92BD2821D005B11B7 /* NewsCell.swift */,
-				FBECDEDD2BD28E63005B11B7 /* NewsModel.swift */,
+				FBF33FDD2BD6ADB1002F29DF /* App */,
+				FBF33FDE2BD6ADBC002F29DF /* Scenes */,
+				FBF33FDF2BD6ADE3002F29DF /* Cell */,
+				FBF33FE02BD6ADF5002F29DF /* Model */,
+				FBF33FE12BD6AE0A002F29DF /* ImageLoading */,
 				FBECDECC2BD25B71005B11B7 /* Assets.xcassets */,
 				FBECDECE2BD25B71005B11B7 /* LaunchScreen.storyboard */,
 				FBECDED12BD25B71005B11B7 /* Info.plist */,
 			);
 			path = imediApp;
+			sourceTree = "<group>";
+		};
+		FBF33FDD2BD6ADB1002F29DF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FBECDEC32BD25B6F005B11B7 /* AppDelegate.swift */,
+				FBECDEC52BD25B6F005B11B7 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FBF33FDE2BD6ADBC002F29DF /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FBECDEC72BD25B6F005B11B7 /* NewsPageViewController.swift */,
+				FBECDED72BD26567005B11B7 /* ArticleViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FBF33FDF2BD6ADE3002F29DF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FBECDED92BD2821D005B11B7 /* NewsCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FBF33FE02BD6ADF5002F29DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FBECDEDD2BD28E63005B11B7 /* NewsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FBF33FE12BD6AE0A002F29DF /* ImageLoading */ = {
+			isa = PBXGroup;
+			children = (
+				FBF33FDB2BD6AA11002F29DF /* ImageViewController.swift */,
+			);
+			path = ImageLoading;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +189,7 @@
 				FBECDEC82BD25B6F005B11B7 /* NewsPageViewController.swift in Sources */,
 				FBECDED82BD26567005B11B7 /* ArticleViewController.swift in Sources */,
 				FBECDEC42BD25B6F005B11B7 /* AppDelegate.swift in Sources */,
+				FBF33FDC2BD6AA11002F29DF /* ImageViewController.swift in Sources */,
 				FBECDEC62BD25B6F005B11B7 /* SceneDelegate.swift in Sources */,
 				FBECDEDE2BD28E63005B11B7 /* NewsModel.swift in Sources */,
 				FBECDEDA2BD2821D005B11B7 /* NewsCell.swift in Sources */,

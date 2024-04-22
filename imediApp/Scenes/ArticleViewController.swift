@@ -27,6 +27,11 @@ class ArticleViewController: UIViewController {
     private func set() {
         descriptionLabel.text = news?.title
         timelabel.text = news?.time
+        guard let photo = news?.photoURL,
+              let photoUrl = URL(string: photo) else {
+            return
+        }
+        image.load(url: photoUrl)
     }
     
     private func setup() {
@@ -58,12 +63,12 @@ class ArticleViewController: UIViewController {
     }
     
     private func setupImage() {
+        mainStackView.addArrangedSubview(image)
+        
         image.widthAnchor.constraint(equalToConstant: 330).isActive = true
         image.heightAnchor.constraint(equalToConstant: 190).isActive = true
         image.layer.cornerRadius = 10
-        image.image = UIImage(named: "Placeholder")
-        
-        mainStackView.addArrangedSubview(image)
+        image.clipsToBounds = true
     }
     
     private func setupTimeLabel() {
